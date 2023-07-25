@@ -1,6 +1,6 @@
 import Data  from "../Components/Data"
 import Header from "../Components/Header"
-import Posts from "../Store/Posts"
+// import Posts from "../Store/Posts"
 
 export default function Homepage() {
     return(

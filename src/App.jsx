@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import About from './Pages/About'
 // import { configureStore } from '@reduxjs/toolkit';
 import 'bulma/css/bulma.css';
-import { Provider } from 'react-redux';
+// import CharacterGallery from './Pages/CharacterGallery';
 
 // const store = configureStore();
 
@@ -20,7 +20,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/charecter-Gallery" element={<Character-Gallery/>} />
+        {/* <Route path="/CharacterGallery" element={<CharacterGallery />} /> */}
         
       </Routes>
       {/* </Provider> */}
