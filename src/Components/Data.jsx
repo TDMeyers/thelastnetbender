@@ -1,6 +1,8 @@
+
+import React from "react"
 import { useState, useEffect } from "react";
 
-export default async function getCharacters() {
+export default function GetCharacters() {
   const [characters, setCharacters] = useState([]);
   const api = "https://last-airbender-api.fly.dev/api/v1/characters/";
 
@@ -11,32 +13,30 @@ export default async function getCharacters() {
       setCharacters(data);
     };
     fetchCharacterData();
-    console.log(characters);
   }, []);
 
-  function loaded() {
+  function Loaded() {
     return (
       <div>
+        {characters.map((character) => (
+          <div key={character._id}>
+            <h1>{character.name}</h1>
+            <br />
+            <img src={character.photoUrl} alt="picture of the character" />
+            {/* <h4>{character.affiliation}</h4> */}
+          </div>
+        ))}
         testing
-        <h1>{characters.name}</h1>
-        <img
-          src={characters.photoUrl}
-          alt="picture of the character"
-        />
       </div>
     );
   }
+
+  function Loading() {
+    return <div>Loading...</div>;
+  }
+
+  return characters ? Loaded() : Loading();
 }
 
-// GET /api/v1/characters -> get all characters (default 20 per page)
-// GET /api/v1/characters/CHARACTER_ID
-// base url = https://last-airbender-api.fly.dev/api/
-// form data = https://last-airbender-api.fly.dev/api/characters/${input}
-// /api/v1/characters/random -> get random character
-// GET /api/v1/characters/avatar
-// get characters w/ specific affiliation = GET /api/v1/characters?affiliation=NATION+NAME
 
-// `https://last-airbender-api.fly.dev/api/v1/characters?affiliation=${input}`
 
-// 1. set a fixed api call to get a list of results in Data - only yields 20 results, or needs pagination
-// 2. set up a formated api call and pass params in to get different results
