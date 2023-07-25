@@ -16,7 +16,7 @@ const Characters = () => {
       <ul>
         {characters.map((character) => (
           <li key={character._id}>
-            <h1>{character.name}</h1>
+            {/* <h1>{character.name}</h1> */}
             <img
               src={character.photoUrl}
               alt="a picture of the character"

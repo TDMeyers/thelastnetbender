@@ -5,7 +5,7 @@ export default function NavBar (){
             <Link to="/">
                 <div>Home</div>
             </Link>
-            <Link to="/character-Gallery">
+            <Link to="/CharacterGallery">
                 <div>Charecters</div>
             </Link>
 
