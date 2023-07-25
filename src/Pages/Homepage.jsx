@@ -1,5 +1,11 @@
-export default function Header (){
+import Data  from "../Components/Data"
+import Header from "../Components/Header"
+
+export default function Homepage() {
     return(
-        <div>The Last NetBender</div>
+        <div>
+            <Data />
+            <Header />
+        </div>
     )
 }

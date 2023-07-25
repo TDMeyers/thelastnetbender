@@ -1,5 +1,5 @@
-export default function Header (){
+export default function NavBar (){
     return(
-        <div>The Last NetBender</div>
+        <div>Hello World</div>
     )
 }

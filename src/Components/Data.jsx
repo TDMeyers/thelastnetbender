@@ -1,29 +1,30 @@
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect } from "react";
 
-const [characters, setCharacters] = useState([]);
-
-async function getCharacters() {
+export default async function getCharacters() {
+  const [characters, setCharacters] = useState([]);
   const api = "https://last-airbender-api.fly.dev/api/v1/characters/";
 
   useEffect(() => {
     const fetchCharacterData = async () => {
       const response = await fetch(api);
       const data = await response.json();
-      setCharacters(data); 
+      setCharacters(data);
     };
     fetchCharacterData();
-    console.log(characters)
+    console.log(characters);
   }, []);
 
-  function loaded(){
-    return(
-        <div>
-            <h1>
-                {characters.name}
-            </h1>
-            <img src={characters.photoUrl} alt="picture of the character" />
-        </div>
-    )
+  function loaded() {
+    return (
+      <div>
+        testing
+        <h1>{characters.name}</h1>
+        <img
+          src={characters.photoUrl}
+          alt="picture of the character"
+        />
+      </div>
+    );
   }
 }
 

@@ -1,3 +1,9 @@
+export default function Form() {
+    return(
+        <div>Hello World</div>
+    )
+}
+
 // export default function Form( { fetchCharacterData }) {
 
 //     const [input, setInput] = useState('')
